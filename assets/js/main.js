@@ -17,14 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  const currentPath = window.location.pathname;
+  let currentPath = window.location.pathname;
+  if (currentPath === '/') {
+    currentPath = '/index.html';
+  }
+  
   const navLinks = document.querySelectorAll('.nav-link');
   
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || 
-        (currentPath === '/' && href === '/index.html') ||
-        (currentPath.includes(href) && href !== '#')) {
+    const normalizedHref = href.startsWith('/') ? href : '/' + href;
+    
+    if (normalizedHref === currentPath || 
+        currentPath.includes(normalizedHref) && normalizedHref !== '/#') {
       link.classList.add('active');
     }
   });
