@@ -277,6 +277,42 @@ body {
   gap: var(--spacing-md);
 }
 
+.work-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.work-tile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.work-tile-content {
+  padding: var(--spacing-lg);
+}
+
+.work-tile-date {
+  font-size: var(--font-size-small);
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.work-tile .card-title {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.work-tile .card-description {
+  margin-bottom: 0;
+}
+
 .bio-section {
   display: grid;
   grid-template-columns: 200px 1fr;

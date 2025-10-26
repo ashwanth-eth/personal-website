@@ -16,22 +16,20 @@ A fast, mobile-responsive, minimalist personal website built with pure HTML, CSS
 ```
 .
 ├── index.html                          # About page (home)
+├── stablecoin-work.html                # Stablecoin Related Work page
+├── side-projects.html                  # Side Projects page
 ├── contact.html                        # Contact page
 ├── writing.html                        # Writing page (links to Substack)
-├── projects/
-│   ├── index.html                      # Projects listing page
-│   ├── stablecoin-payment-rails.html   # Project detail page
-│   ├── defi-yield-optimizer.html       # Project detail page
-│   └── stablecoin-analytics.html       # Project detail page
 ├── assets/
 │   ├── css/
 │   │   └── main.css                    # All styles (CSS variables, components)
 │   ├── js/
 │   │   └── main.js                     # Navigation and mobile menu logic
 │   └── img/
-│       ├── headshot.svg                # Placeholder headshot image
+│       ├── headshot.jpg                # Headshot image
 │       ├── favicon.png                 # Site favicon
-│       └── favicon.svg                 # Favicon source
+│       ├── kinexys-payment-tokens.png  # Sample work tile image
+│       └── *.svg                       # SVG assets
 └── README.md                           # This file
 ```
 
@@ -60,33 +58,32 @@ Update all instances of these placeholder URLs:
 1. **Headshot**: Replace `assets/img/headshot.svg` with your photo (200x200px recommended, circular crop in CSS)
 2. **Favicon**: Replace `assets/img/favicon.png` with your custom favicon (32x32px PNG)
 
-### Adding a New Project
+### Adding Work Tiles
 
-1. **Create the project detail page**:
-   ```bash
-   cp projects/stablecoin-payment-rails.html projects/your-project-slug.html
-   ```
+The site uses two separate pages for showcasing work:
+- **Stablecoin Related Work** (`stablecoin-work.html`)
+- **Side Projects** (`side-projects.html`)
 
-2. **Edit the new file**:
-   - Update the `<title>` and meta tags
-   - Replace the project title, overview, and content
-   - Keep the sidebar and footer structure unchanged
+#### Adding a New Work Tile
 
-3. **Add the project to the listing page**:
-   
-   Open `projects/index.html` and add a new card in the `<div class="projects-grid">` section:
+1. **Prepare your image**: Save it to `assets/img/` (recommended size: 800x450px for optimal display)
+
+2. **Add to the appropriate page** (`stablecoin-work.html` or `side-projects.html`):
 
    ```html
-   <article class="card">
-     <h2 class="card-title">Your Project Title</h2>
-     <p class="card-description">
-       A brief description of your project (2-3 sentences).
-     </p>
-     <a href="your-project-slug.html" class="card-link">View project →</a>
-   </article>
+   <a href="https://your-link-here.pdf" class="card work-tile" target="_blank" rel="noopener noreferrer">
+     <img src="assets/img/your-image.png" alt="Project title" class="work-tile-image">
+     <div class="work-tile-content">
+       <p class="work-tile-date">Month Year</p>
+       <h2 class="card-title">Your Project Title</h2>
+       <p class="card-description">
+         A brief description of the project (2-3 sentences).
+       </p>
+     </div>
+   </a>
    ```
 
-4. **Test the navigation** to ensure everything links correctly.
+3. **For internal pages** (instead of external PDFs), create a new HTML page and link to it with `href="your-page.html"`
 
 ### Updating the Sidebar Navigation
 
