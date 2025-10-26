@@ -552,9 +552,7 @@ body {
   width: 100%;
   max-width: 400px;
   height: auto;
-  aspect-ratio: 1;
-  object-fit: cover;
-  background-color: var(--color-border);
+  display: block;
 }
 
 .about-name {
@@ -635,12 +633,11 @@ body {
   align-items: start;
 }
 
-.headshot {
+.bio-section .headshot {
   width: 200px;
-  height: 200px;
+  height: auto;
   border-radius: 50%;
-  object-fit: cover;
-  background-color: var(--color-border);
+  display: block;
 }
 
 .bio-content h2 {
