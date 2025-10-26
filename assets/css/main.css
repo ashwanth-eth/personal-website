@@ -541,6 +541,85 @@ body {
   text-decoration: underline;
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-headshot .headshot {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background-color: var(--color-border);
+}
+
+.about-name {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.about-contact {
+  margin-bottom: var(--spacing-xl);
+  font-size: 16px;
+}
+
+.about-contact p {
+  margin-bottom: var(--spacing-xs);
+  color: #666;
+}
+
+.about-contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.about-contact a:hover {
+  text-decoration: underline;
+}
+
+.experience-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-heading {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-lg);
+  color: #666;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.experience-years {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.experience-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-company {
+  font-size: 16px;
+  color: #666;
+}
+
 .bio-section {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -658,5 +737,25 @@ body {
   
   .project-header {
     justify-content: center;
+  }
+  
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .about-headshot .headshot {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .about-name {
+    font-size: 36px;
+  }
+  
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
   }
 }
