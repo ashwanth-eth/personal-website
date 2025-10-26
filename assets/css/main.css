@@ -273,8 +273,8 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
 }
 
 .work-tile {
@@ -391,6 +391,10 @@ body {
   .section-subtitle {
     font-size: 22px;
   }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -404,5 +408,9 @@ body {
   .main-content {
     padding: var(--spacing-md);
     padding-top: calc(60px + var(--spacing-md));
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
