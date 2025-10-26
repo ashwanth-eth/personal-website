@@ -620,6 +620,13 @@ body {
   color: #666;
 }
 
+.experience-awards {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+  margin-top: var(--spacing-xs);
+}
+
 .bio-section {
   display: grid;
   grid-template-columns: 200px 1fr;
