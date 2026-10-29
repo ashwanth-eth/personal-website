@@ -355,3 +355,7 @@ h2 {
 .entry.text {
   grid-template-columns: 1fr;
 }
+
+.prose p:not(.lede) {
+  color: var(--muted);
+}
