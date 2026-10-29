@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/about", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/contact.html", "destination": "/#contact", "permanent": true },
+    { "source": "/writing", "destination": "/stablecoin-work.html", "permanent": true },
+    { "source": "/writing.html", "destination": "/stablecoin-work.html", "permanent": true }
+  ]
+}
