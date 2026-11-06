@@ -85,7 +85,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 45%;
+  object-position: 55% 15%;
 }
 
 .content {
@@ -358,4 +358,91 @@ h2 {
 
 .prose p:not(.lede) {
   color: var(--muted);
+}
+
+/* Writing list: source label before each summary */
+
+.list .source {
+  color: var(--ink);
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+/* Article pages */
+
+.prose h2 {
+  margin-top: 56px;
+}
+
+/* Scaffolding notes. Remove every .todo before deploying. */
+
+.todo {
+  color: #9a5b00 !important;
+  font-style: italic;
+  border-left: 3px solid #e8b04a;
+  padding-left: 12px;
+}
+
+.dateline {
+  color: var(--muted);
+  font-size: 15px;
+  margin: -20px 0 24px;
+}
+
+/* Takes: one per row, click to expand the reason */
+
+.takes {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.takes li {
+  border-top: 1px solid var(--rule);
+}
+
+.takes li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.takes summary,
+.takes .take {
+  display: block;
+  padding: 16px 32px 16px 0;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.takes summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.takes summary::-webkit-details-marker {
+  display: none;
+}
+
+.takes summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 14px;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.takes details[open] summary::after {
+  content: "\2212";
+}
+
+.takes summary:hover {
+  color: var(--accent);
+}
+
+.takes details p {
+  color: var(--muted);
+  max-width: 36em;
+  padding: 0 32px 18px 0;
 }

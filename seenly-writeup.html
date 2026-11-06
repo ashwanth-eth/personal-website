@@ -24,25 +24,22 @@
   <main class="page">
     <nav class="topnav" aria-label="Main navigation">
       <a href="index.html" class="home">Ashwanth Samuel</a>
-      <a href="stablecoin-work.html">Research</a>
+      <a href="writing.html">Writing</a>
       <a href="side-projects.html" aria-current="page">Projects</a>
       <a href="index.html#contact">Contact</a>
     </nav>
 
     <h1>Seenly</h1>
+    <p class="dateline">December 2025</p>
     <div class="prose">
-      <p class="lede">A photo-sharing app for weddings. We used it at 6 weddings so guests could share their photos.</p>
-      <p>Guests uploaded photos as the day went on, and face matching let each person find every photo they were in. The couple got all of it in one place, without hashtags or manual uploads.</p>
-      <p>It's retired now, since all of my friends are married.</p>
+      <p>Going into my own wedding, I was seeing stars at how much money people spend on photographers. Then I started thinking about all the weddings I'd been to as a semi-professional wedding guest. I hadn't seen any of the photos I was in. I definitely remember posing for pictures and seeing the flash of the photographer's camera on the dance floor, but I never saw the pictures.</p>
+      <p>So I started talking to my friends. You put so much work into planning a wedding, and afterward it's so much work to share the photos. What are you going to do, text everybody the photos they're in? Some people did that, but those were the type A folks. Everyone else just wants their photos from the wedding. I kept hearing this from friends, so I said, okay, why don't I build it?</p>
+      <p>My first attempt in June was a crude one, built on Replit. Over the next six months I rebuilt most of it so that a guest could take a selfie and see every photo they were in.</p>
+      <p>And it was awesome. Guests at six weddings used it, and people liked it. I learned a lot about getting machine learning into production without leaking data, and even more about page loads. If something takes longer than usual to load, it feels laggy and you lose people's interest, even if it doesn't seem that bad to you as the creator.</p>
+      <p>I was nervous sharing it, because you care so deeply about something you've created. Seenly was also the first product I pitched at a pitch competition. It was nerve-wracking, but I thought it went well.</p>
+      <p>We shut Seenly down. The major photo-sharing album sites are starting to add this kind of feature, so it no longer made sense for me to do it. Also, all my friends got married.</p>
     </div>
 
-    <h2>How it was built</h2>
-    <div class="prose">
-      <p>I built Seenly from June to December 2025, across 229 commits. When guests uploaded photos, InsightFace running on Modal found every face, and HDBSCAN grouped the faces of the same person. Guests could take a selfie and see every photo they were in.</p>
-      <p>The code is private, but I'm happy to walk through it. <a href="mailto:ashwanthsamuel@gmail.com">Email me</a>.</p>
-    </div>
-
-    <h2>Demo</h2>
     <div class="video">
       <iframe src="https://www.youtube.com/embed/ya2za_zSlvQ" title="Seenly demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>

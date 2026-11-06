@@ -4,7 +4,8 @@
     { "source": "/about.html", "destination": "/", "permanent": true },
     { "source": "/contact", "destination": "/#contact", "permanent": true },
     { "source": "/contact.html", "destination": "/#contact", "permanent": true },
-    { "source": "/writing", "destination": "/stablecoin-work.html", "permanent": true },
-    { "source": "/writing.html", "destination": "/stablecoin-work.html", "permanent": true }
+    { "source": "/writing", "destination": "/writing.html", "permanent": true },
+    { "source": "/stablecoin-work", "destination": "/writing.html", "permanent": true },
+    { "source": "/stablecoin-work.html", "destination": "/writing.html", "permanent": true }
   ]
 }
