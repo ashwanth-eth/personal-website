@@ -389,6 +389,30 @@ h2 {
   margin: -20px 0 24px;
 }
 
+.dek {
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 32em;
+  margin: -16px 0 12px;
+}
+
+.dek + .dateline {
+  margin-top: 0;
+}
+
+.essay-video {
+  margin: 0 0 32px;
+}
+
+.essay-video video {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: 6px;
+  background: #000;
+}
+
 /* Takes: one per row, click to expand the reason */
 
 .takes {
