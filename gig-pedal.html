@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Claude and I built a $45 foot pedal that turns my sheet music and cues my backing tracks at violin gigs.">
+  <meta name="author" content="Ashwanth Samuel">
+
+  <meta property="og:title" content="Can Claude Save My Violin Gigging? - Ashwanth Samuel">
+  <meta property="og:description" content="How Claude and I built a $45 foot pedal that turns my sheet music and cues my backing tracks at violin gigs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ashwanthsamuel.com/gig-pedal.html">
+  <meta property="og:image" content="https://ashwanthsamuel.com/assets/img/gig-pedal/box-wired.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can Claude Save My Violin Gigging? - Ashwanth Samuel">
+  <meta name="twitter:description" content="How Claude and I built a $45 foot pedal that turns my sheet music and cues my backing tracks at violin gigs.">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Can Claude Save My Violin Gigging? - Ashwanth Samuel</title>
+  <script src="assets/js/analytics.js"></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="index.html" class="home">Ashwanth Samuel</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="side-projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <h1>Can Claude Save My Violin Gigging?</h1>
+    <p class="dateline">November 2026</p>
+
+    <div class="prose">
+      <p>I love playing violin, but the hardest part about performing is easily the logistics of it all. Strings can snap, the instrument gives me attitude outside (it goes out of tune), and flying with it requires begging and pleading with flight attendants and other passengers alike not to put stuff on top of my violin in the overhead bin.</p>
+      <p>Far and away the most complicated thing when performing, however, is judging how you'll sound and what acoustics you'll need. If you're playing violin in a symphony, you're set. Show up to your nice, air-conditioned, state-of-the-art concert hall, tune up, run through some etudes, and you're ready to rock and roll. Gigging, on the other hand, is a completely different beast.</p>
+      <p>Over the years, friends and family have often asked me to play at their engagements, weddings, and other intimate events. Most recently, I was asked to play at my buddy's outdoor wedding in upstate New York at the tail end of fall. Although I have spent 150 words complaining about how annoying it is to play the violin, let me be clear that I still love doing these types of things. Of course I said yes, and I set to work thinking about the logistics.</p>
+      <p>Since they asked me to play by myself, I had to think through my options. I personally don't love the way the violin sounds on its own. Maybe put a different way, it is extremely difficult to make the violin sound "full," and let me tell you, Pachelbel's Canon (a wedding staple) does not lend itself well to just one violin. A <a href="https://en.wikipedia.org/wiki/Canon_(music)" target="_blank" rel="noopener noreferrer">canon</a>, by its nature, has several instruments play the same melody, each one coming in a couple of bars after the last. When I am the only person asked to play, I oftentimes play with a backing track.</p>
+
+      <h2>Here's the problem</h2>
+      <p>Picture this. I'm performing at a beautiful venue overlooking the Hudson Valley. The piano accompaniment to Jesu, Joy of Man's Desiring starts, and I begin to liltingly float over it. After a few minutes, I look over at the wedding coordinator, and she's done sending in the groomsmen and is starting to send the parents. Oh no, I was supposed to switch pieces at this point, but I still have 15 seconds left on my track. What am I supposed to do?</p>
+      <p>In my case, thank goodness I had a friendly helper named Colin (the lead singer of the wedding band playing that evening), whom I voluntold to help me cue the next track. But poor Colin had to manually fade in and out of songs on my iPhone.</p>
+      <p>And as I begin the ill-fated Pachelbel's Canon, I turn to see the bride's 15 bridesmaids (no exaggeration) sauntering down the aisle, and by bridesmaid 7, I'm running out of music. I can't turn my sheet music because (A) it's windy and my one page is taped down, and (B) I didn't expect to be 2.5 minutes deep into it and don't want to start sight-reading a part I haven't practiced.</p>
+      <p>Like most instrumentalists, I can do very little (ahem, nothing) when both of my hands are occupied. It is quite stressful in the moment.</p>
+      <p>Ultimately, the wedding went great thanks to Colin (and my wife, who ran to get tape during the pre-ceremony). But on the flight home that Sunday, I started thinking: could I, with my favorite buddy Claude, fix this problem?</p>
+
+      <h2>Building the pedal</h2>
+      <p>On the flight, we strategized. I had used pedals before (to add reverb, loop my playing, and so on), so I was comfortable using my feet to take action while playing violin. What if I programmed a piano sustain pedal to play and pause tracks, fade out of the current song and into the next one, and turn a page of virtual sheet music?</p>
+      <p>The pedal only has one action, so everything comes down to how I press it. One tap could turn the page. Two taps could pause or play the track, with a quick fade so nothing cuts off. Three taps could go back a page, in case I tap by accident. And holding it down could fade out the current song, fade in the next one, and pull up its sheet music.</p>
+      <p>Claude and I talked about some pedals that already exist off the shelf. There are pedals that advance tracks or turn pages, but I couldn't find one that does both. The bigger problem was flexibility. If I decided I wanted to switch what each pedal action meant, I might not be able to with an off-the-shelf pedal.</p>
+      <p>Claude put together a shopping list ($45 all in), and the following weekend, when everything arrived, we got to work. Claude would build a web app that I could upload my mp3 backing tracks to, along with my sheet music when relevant, and then walk me through putting all of the hardware together. With an ESP32 board (a $9 microcontroller), a Yamaha sustain pedal I already owned, a couple of audio adapters, some jumper wires, and a plastic project box, it took about 90 minutes for Claude to load the firmware onto my board, help me troubleshoot one piece that was faulty out of the box, and wire up a Bluetooth pedal that I could use at my next gig.</p>
+    </div>
+
+    <div class="photo-grid">
+      <figure class="photo">
+        <img src="assets/img/gig-pedal/pedal.jpg" alt="A black Yamaha FC5 sustain pedal with its cable and quarter-inch plug" loading="lazy">
+        <figcaption>My Yamaha sustain pedal, which I already owned.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="assets/img/gig-pedal/esp32-board.jpg" alt="An ESP32 board plugged into a short braided USB cable" loading="lazy">
+        <figcaption>The ESP32 board, which does the thinking, and its USB cable.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="assets/img/gig-pedal/screw-terminal-plug.jpg" alt="A quarter-inch plug with a green two-screw terminal block on its end" loading="lazy">
+        <figcaption>A quarter-inch plug with screw terminals. The first one I opened was faulty.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="assets/img/gig-pedal/coupler.jpg" alt="A black threaded quarter-inch female-to-female coupler" loading="lazy">
+        <figcaption>The coupler that joins the pedal to the plug.</figcaption>
+      </figure>
+    </div>
+
+    <div class="prose">
+      <p>To be clear, I am NOT handy at all. As evidence, I took an additional 45 minutes to drill holes in this project box with a power drill (at one point, I had my grill lighter out?). But otherwise, it was surprisingly easy.</p>
+    </div>
+
+    <figure class="photo">
+      <img src="assets/img/gig-pedal/box-wired.jpg" alt="The open project box with the ESP32 board, red and tan jumper wires, and the plug and coupler running through a hole in the side" loading="lazy">
+      <figcaption>Everything wired up inside the project box.</figcaption>
+    </figure>
+    <figure class="photo">
+      <img src="assets/img/gig-pedal/drill-shavings.jpg" alt="Black plastic drill shavings scattered on a sheet of paper against a white baseboard" loading="lazy">
+      <figcaption>Shavings from drilling against the wall, lol.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Was it worth it?</h2>
+      <p>Now you're probably thinking, was this worth all the trouble? When I almost drilled my hand off (which would have been the end of my violin-playing days...), I was thinking that too. But as it came together and I started testing out the pedal, I thought about how stressed I was before the ceremony and how nervous Colin was trying to help me. This was an absolute game changer.</p>
+      <p>And because I built it, I can change what it does. I often just spend time talking to my AI tools of choice (Claude, Muse, Codex), so what if one tap pulled up Claude and started dictation mode, while two taps went to Muse?</p>
+      <p>It's funny, because a lot of people in the creative arts community are actively pushing against AI, but this was such a useful use case, and I'm sure others would love to build something like it themselves. I'm sure I've come up with this idea before in my 25 years of playing violin, but I never had the tools or the capability to do anything about it. This time, I had an idea, and because I'm a subject matter expert on playing the violin, I knew what questions to ask and was able to make it happen.</p>
+      <p>The point is, for less money than I thought and with less EFFORT than I had imagined, Claude and I made something quite interesting that I am PUMPED about using in the future. I know the personal-software thesis is no longer <em>in vogue</em>, but as models get stronger, the bottleneck becomes our own physical limitations (in my case, my drilling abilities). Maybe in the future I'll have a robot that drills things for me, to much more precise specifications (please, no one closely examine the irregularly shaped holes in my project box). I might be slightly wary of a robot wielding a power drill, but hey, that feels like a tomorrow problem.</p>
+    </div>
+
+    <footer class="footer">
+      <a href="https://www.linkedin.com/in/ashwanth-samuel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/Ashwanth_Samuel" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://overcollateralized.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+      <a href="https://github.com/ashwanth-eth" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span class="place">Atlanta, GA</span>
+    </footer>
+  </main>
+</body>
+</html>
