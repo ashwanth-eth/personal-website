@@ -506,3 +506,67 @@ h2 {
   aspect-ratio: 3 / 4;
   object-fit: cover;
 }
+
+/* Numbered steps in article pages */
+
+.prose ol.steps {
+  max-width: 36em;
+  margin: 0 0 24px;
+  padding-left: 1.4em;
+}
+
+.prose ol.steps li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.prose ol.steps strong {
+  font-weight: 500;
+}
+
+/* Callout boxes in article pages */
+
+.callout {
+  max-width: 36em;
+  margin: 8px 0 32px;
+  padding: 18px 22px;
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  background: #f2f6f4;
+}
+
+.callout p {
+  margin-bottom: 8px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout strong {
+  font-weight: 500;
+}
+
+.callout-label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.callout.warning {
+  border-left-color: #b3261e;
+  background: #fbefed;
+}
+
+.callout.warning .callout-label {
+  color: #b3261e;
+}
+
+.callout.warning blockquote p {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
