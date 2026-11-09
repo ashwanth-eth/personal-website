@@ -1,11 +1,18 @@
 {
+  "cleanUrls": true,
   "redirects": [
     { "source": "/about", "destination": "/", "permanent": true },
-    { "source": "/about.html", "destination": "/", "permanent": true },
     { "source": "/contact", "destination": "/#contact", "permanent": true },
-    { "source": "/contact.html", "destination": "/#contact", "permanent": true },
-    { "source": "/writing", "destination": "/writing.html", "permanent": true },
-    { "source": "/stablecoin-work", "destination": "/writing.html", "permanent": true },
-    { "source": "/stablecoin-work.html", "destination": "/writing.html", "permanent": true }
+    { "source": "/stablecoin-work", "destination": "/writing", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/css/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }]
+    }
   ]
 }
